@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Alfonso Villaseñor Felix | Desarrollador Móvil</title>
+  <meta name="description" content="Portafolio de desarrollador móvil, estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital.">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Aplica el tema guardado antes de pintar para evitar parpadeos */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">&lt;/&gt; <span>Portafolio</span></a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a></li>
+          <li><a href="#proyectos" data-i18n="nav_projects">Proyectos</a></li>
+          <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+        <div class="controls">
+          <label class="visually-hidden" for="lang" data-i18n="lang_label">Idioma</label>
+          <select id="lang" aria-label="Idioma">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+          </select>
+          <button id="themeBtn" class="icon-btn" aria-label="Cambiar tema" title="Cambiar tema">
+            <span class="icon-moon" aria-hidden="true">☾</span>
+            <span class="icon-sun" aria-hidden="true">☀</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow" data-i18n="hero_hello">Hola, soy</p>
+          <h1>Kevin Alfonso Villaseñor Felix</h1>
+          <p class="role" data-i18n="hero_role">Desarrollador Móvil</p>
+          <p class="lead" data-i18n="hero_lead">Estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital. Desarrollo aplicaciones móviles claras, funcionales y fáciles de usar.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#proyectos" data-i18n="hero_btn_projects">Ver proyectos</a>
+            <a class="btn btn-ghost" href="cv/CV.pdf" target="_blank" rel="noopener" data-i18n="hero_btn_cv">Descargar CV (PDF)</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="img/foto.png" width="400" height="500" alt="Fotografía de perfil" data-i18n-alt="photo_alt">
+        </figure>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ / FORMACIÓN -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <h2 data-i18n="about_title">Sobre mí</h2>
+        <div class="two-col">
+          <div>
+            <p data-i18n="about_p1">Soy estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital con enfoque en el desarrollo de aplicaciones móviles. Me interesa crear aplicaciones claras y funcionales que resuelvan problemas reales.</p>
+            <p data-i18n="about_p2">Busco una oportunidad de prácticas profesionales para seguir aprendiendo y aportar en un equipo de desarrollo.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="edu_title">Formación académica</h3>
+            <ul class="timeline">
+              <li>
+                <strong data-i18n="edu_degree">Ingeniería en Tecnologías de la Información e Innovación Digital</strong>
+              </li>
+            </ul>
+            <h3 data-i18n="lang_title">Idiomas</h3>
+            <ul class="lang-list">
+              <li><span data-i18n="lang_es">Español</span> <em data-i18n="lvl_native">Nativo</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2 data-i18n="projects_title">Proyectos principales</h2>
+        <p class="section-lead" data-i18n="gitlab_text">Mis proyectos están publicados en GitLab.</p>
+        <div class="grid">
+          <article class="card project">
+            <h3 data-i18n="p1_title">Aplicación Unidad 1</h3>
+            <p data-i18n="p1_desc">Proyecto académico de la Unidad 1.</p>
+            <a class="link" href="https://gitlab.com/kevinvillasenorfelix/aplicacionunidad1" target="_blank" rel="noopener" data-i18n="gitlab_repo">Ver en GitLab</a>
+          </article>
+          <article class="card project">
+            <h3 data-i18n="p2_title">Aplicación Unidad 2</h3>
+            <p data-i18n="p2_desc">Proyecto académico de la Unidad 2.</p>
+            <a class="link" href="https://gitlab.com/kevinvillasenorfelix/aplicacionunidad02" target="_blank" rel="noopener" data-i18n="gitlab_repo">Ver en GitLab</a>
+          </article>
+        </div>
+        <p><a class="btn btn-primary" href="https://gitlab.com/kevinvillasenorfelix" target="_blank" rel="noopener" data-i18n="gitlab_btn">Ver mi perfil de GitLab</a></p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="container contact">
+        <h2 data-i18n="contact_title">Contacto</h2>
+        <p class="section-lead" data-i18n="contact_lead">Estos son mis perfiles profesionales.</p>
+        <ul class="contact-list">
+          <li>GitLab: <a href="https://gitlab.com/kevinvillasenorfelix" target="_blank" rel="noopener">gitlab.com/kevinvillasenorfelix</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Kevin Alfonso Villaseñor Felix. <span data-i18n="footer">Hecho con HTML, CSS y JavaScript.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
